@@ -3,18 +3,24 @@
 
 function caracteresEnComun(str1, str2){
     const comunes = []
+    // Recorrido del primer string
     for(ele in str1){
+        // Recorrido del segundo string
         for(ele2 in str2){
+            // Verifico que el elemento de el str1 coincida con el elemento evaluado del str2 y que no sea un espacio
             if(str1[ele] === str2[ele2] && str2[ele2] !== " "){
+                // Busco en el array "comunes" si el elemento ya se encuentra agregado para no volverlo a agregar
                 if((comunes.find(busc => busc === str2[ele2]))){
-                    continue 
+                    // Hacemos un "continue" para seguir hacia la otra iteracion del for mas interno
+                    continue
                 } else{
+                    // Agrego al array "comunes" el caracter comun
                     comunes.push(str2[ele2])
                 }
             }
         }
     }
-
+    // Devuelvo el arreglo que contiene o no caracteres comunes
     return comunes
 }
 
