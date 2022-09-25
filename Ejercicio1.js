@@ -21,6 +21,7 @@ function numDuplicados(str){
     }
     // Creo una variable acumuladora para almacenar la suma de las letras que estan en el array mas de una vez
     let rep = 0
+
     for(i in store){
         // Compruebo si el valor correspondiente a la propiedad evaluada es mayor a 1
         if(store[i] > 1)
